@@ -61,7 +61,30 @@
     .carousel-control-next-icon {
         background-color: #000;
         border-radius: 50%;
+        
     }
+  /* Hide mobile images by default */
+.mobile-img {
+    display: none;
+}
+
+/* Show desktop images by default */
+.desktop-img {
+    display: block;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 600px) {
+    /* Show mobile images */
+    .mobile-img {
+        display: block;
+    }
+
+    /* Hide desktop images */
+    .desktop-img {
+        display: none;
+    }
+}
 </style>
 
 <body>
@@ -311,9 +334,11 @@
             <div class="carousel-item active">
                 <img 
                     src="assets/images/slider/indexmain.jpg" 
-                    srcset="assets/images/slider/indeximg3.jpg 600w, assets/images/slider/indexmain.jpg 1200w" 
-                    sizes="(max-width: 600px) 600px, 1200px" 
-                    class="d-block w-100" 
+                    class="d-block w-100 desktop-img" 
+                    alt="First Slide">
+                <img 
+                    src="assets/images/slider/indeximg3.jpg" 
+                    class="d-block w-100 mobile-img" 
                     alt="First Slide">
                 <div class="carousel-caption d-none d-md-block">
                     <!-- <h5>Financial Freedom</h5>
@@ -323,22 +348,26 @@
             <div class="carousel-item">
                 <img 
                     src="assets/images/slider/indexmain2.jpg" 
-                    srcset="assets/images/slider/indeximg4.jpg 600w, assets/images/slider/indexmain2.jpg 1200w" 
-                    sizes="(max-width: 600px) 600px, 1200px" 
-                    class="d-block w-100" 
+                    class="d-block w-100 desktop-img" 
+                    alt="Second Slide">
+                <img 
+                    src="assets/images/slider/indeximg4.jpg" 
+                    class="d-block w-100 mobile-img" 
                     alt="Second Slide">
                 <div class="carousel-caption d-none d-md-block">
                     <!-- <h5>Secure Investments</h5>
                     <p>Grow your wealth with our secure and trusted investment options.</p> -->
                 </div>
             </div>
-            <div class="carousel-item">
+            <!-- <div class="carousel-item">
                 <img 
                     src="assets/images/slider/indexmain.jpg" 
-                    srcset="assets/images/slider/indexmain-small.jpg 600w, assets/images/slider/indexmain.jpg 1200w" 
-                    sizes="(max-width: 600px) 600px, 1200px" 
-                    class="d-block w-100" 
+                    class="d-block w-100 desktop-img" 
                     alt="Third Slide">
+                <img 
+                    src="assets/images/slider/indeximg3.jpg" 
+                    class="d-block w-100 mobile-img" 
+                    alt="Third Slide"> -->
                 <!-- <div class="carousel-caption d-none d-md-block">
                     <h5>Personalized Banking</h5>
                     <p>Customized banking solutions to fit your individual needs.</p>

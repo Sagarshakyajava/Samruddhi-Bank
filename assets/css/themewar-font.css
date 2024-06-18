@@ -16608,60 +16608,58 @@
 
 
   /* internet banking */
-  .internatebanking-card{
+  .internatebanking-card {
     display: flex;
-     flex-wrap: wrap;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     width: 100%;
     margin-top: 4%;
-    
-  
-  }
+}
 
-  
-  .banking-card {
+.banking-card {
     position: relative;
-    width: 335px; /* Updated width */
-    height: 300px; /* Updated height */
+    width: 335px;
+    height: 300px;
     border-radius: 14px;
-    /* z-index: 1111; */
     overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
     box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+    margin: 10px; /* Added margin to create space between cards */
 }
 
 .bg {
     position: absolute;
     top: 5px;
     left: 5px;
-    width: 325px; /* Adjusted width to maintain 5px border */
-    height: 290px; /* Adjusted height to maintain 5px border */
+    width: calc(100% - 10px); /* Updated to maintain the border dynamically */
+    height: calc(100% - 10px); /* Updated to maintain the border dynamically */
     z-index: 2;
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(24px);
     border-radius: 10px;
     overflow: hidden;
     outline: 2px solid white;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-.bg h4{
-  text-align: center;
-  padding-top: 4%;
+
+.bg h4 {
+    text-align: center;
+    padding-top: 4%;
+    margin: 0; /* Remove default margin */
 }
+
 .bg p {
-  text-align: center;
-  align-items: center;
-   padding-top: 5%;
-   padding-left: 3%;
-   padding-right: 3%;
-   color: rgb(0, 0, 0);
- 
-
-
-
+    text-align: center;
+    padding: 5% 3% 0 3%; /* Adjust padding for all sides */
+    color: rgb(0, 0, 0);
+    margin: 0; /* Remove default margin */
 }
 
 .blob {
@@ -16669,8 +16667,8 @@
     z-index: 1;
     top: 50%;
     left: 50%;
-    width: 150px; /* Keeping the size as is */
-    height: 150px; /* Keeping the size as is */
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     background-color: #143070;
     opacity: 1;
@@ -16683,38 +16681,47 @@
         transform: translate(-100%, -100%) translate3d(0, 0, 0);
     }
     25% {
-        transform: translate(-100%, -100%) translate3d(150%, 0, 0); /* Adjusted for new size */
+        transform: translate(-100%, -100%) translate3d(150%, 0, 0);
     }
     50% {
-        transform: translate(-100%, -100%) translate3d(150%, 150%, 0); /* Adjusted for new size */
+        transform: translate(-100%, -100%) translate3d(150%, 150%, 0);
     }
     75% {
-        transform: translate(-100%, -100%) translate3d(0, 150%, 0); /* Adjusted for new size */
+        transform: translate(-100%, -100%) translate3d(0, 150%, 0);
     }
     100% {
         transform: translate(-100%, -100%) translate3d(0, 0, 0);
     }
 }
 
-
 @media (max-width: 768px) {
-  .internatebanking-card {
-      justify-content: center; /* Center cards on smaller screens */
-  }
+    .internatebanking-card {
+        justify-content: center;
+    }
 
-  .banking-card {
-      max-width: 280px; /* Adjust width for smaller devices */
-  }
+    .banking-card {
+        max-width: 280px;
+        width: 90%; /* Make the card width responsive */
+        margin: 10px; /* Ensure spacing between cards */
+    }
+
+    .bg {
+        width: calc(100% - 10px);
+        height: calc(100% - 10px);
+    }
 }
 
-/* Media query for even smaller devices like mobile phones */
 @media (max-width: 480px) {
-  .banking-card {
-      max-width: 90%; /* Adjust width to fit smaller screens */
-      border-radius: 10px; /* Adjust border radius for smaller screens */
-      box-shadow: 10px 10px 30px #bebebe, -10px -10px 30px #ffffff; /* Adjust shadow for smaller screens */
-  }
+    .banking-card {
+        max-width: 90%;
+        width: 90%;
+        border-radius: 10px;
+        box-shadow: 10px 10px 30px #bebebe, -10px -10px 30px #ffffff;
+        margin: 10px; /* Ensure spacing between cards */
+    }
+
+    .bg {
+        width: calc(100% - 10px);
+        height: calc(100% - 10px);
+    }
 }
-
-
-  
