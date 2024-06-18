@@ -42,11 +42,27 @@
     }
 
     .slider {
-        width: 100%;
-        height: 100vh;
-        position: relative;
-        overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Adjustments for devices with a width of up to 768px (tablets and smaller) */
+@media (max-width: 768px) {
+    .slider {
+        height: 50vh; /* Reduce the height for better visibility on smaller screens */
     }
+}
+
+/* Adjustments for devices with a width of up to 480px (phones) */
+@media (max-width: 480px) {
+    .slider {
+        height: 40vh; 
+        /* Further reduce the height for smaller screens */
+    }
+}
+
 
     .slick-slide {
         width: 100%;

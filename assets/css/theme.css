@@ -5608,6 +5608,25 @@
   opacity: 1;
 }
 
+/* Responsive styles for laptops and tablets */
+@media (max-width: 1024px) {
+  .card-directors {
+    width: 90%;
+    height: auto;
+    margin: 20px auto;
+  }
+
+  .card-directors .img {
+    margin: 50px auto 10px auto;
+    width: 75px;
+    height: 75px;
+  }
+
+  .card-directors .heading {
+    font-size: 16px;
+  }
+}
+
 /* Responsive styles for tablets and small screens */
 @media (max-width: 768px) {
   .card-directors {
@@ -5646,7 +5665,6 @@
   }
 }
 
-  /*  */
 
   
 
