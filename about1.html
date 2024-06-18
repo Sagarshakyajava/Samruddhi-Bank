@@ -73,21 +73,35 @@
     }
 
     .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.75);
-        display: flex;
-        justify-content: center;
-        align-items: left;
-        color: white;
-        text-align: left;
-        padding: 20px;
-        box-sizing: border-box;
-        flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    color: white;
+    text-align: left;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+    .overlay {
+        padding: 15px;
     }
+}
+
+@media (max-width: 480px) {
+    .overlay {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
 
     .overlay h1 {
         margin: 0;
@@ -96,10 +110,35 @@
     }
 
     .overlay p {
-        margin: 10px 0 0;
-        font-size: 24px;
-        z-index: 2;
+    margin: 10px 0 0;
+    font-size: 24px;
+    z-index: 2;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+    .overlay {
+        padding: 15px;
     }
+
+    .overlay p {
+        margin: 8px 0 0;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .overlay {
+        padding: 10px;
+        font-size: 14px;
+        padding-bottom: 36px;
+    }
+
+    .overlay p {
+        margin: 5px 0 0;
+        font-size: 18px;
+    }
+}
 
     .slick-prev,
     .slick-next {
@@ -431,7 +470,7 @@
           } 
           @media (min-width: 769px) { 
               margin-top: -200px;
-             
+                
                
           }">
         <h2>Samruddhi CO-Operative <span>Bank Ltd.</span></h2>
