@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="assets/css/ignore_for_wp.css" />
     <link rel="stylesheet" href="assets/css/theme.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
+
 
     <link rel="stylesheet" href="assets/css/responsive.css" />
 
@@ -38,7 +38,7 @@
         margin: 0;
         padding: 0;
         height: 100%;
-      
+
     }
 
     .slider {
@@ -67,7 +67,7 @@
         justify-content: center;
         align-items: left;
         color: white;
-        text-align:left;
+        text-align: left;
         padding: 20px;
         box-sizing: border-box;
         flex-direction: column;
@@ -119,10 +119,17 @@
     .slick-next {
         right: 10px;
     }
+
+
+      
+    
     #myChart {
-           
-            margin-bottom: 7%;
-        }
+
+        margin-bottom: 7%;
+        width: 90%;
+            max-width: 800px;
+            margin: auto;
+    }
 </style>
 
 <body>
@@ -400,8 +407,7 @@
             });
         });
     </script>
-   <div class="container-fluid OB3" 
-   style="margin-top: -200px; 
+    <div class="container-fluid OB3" style="margin-top: -200px; 
           margin-bottom: 10%; 
           @media (max-width: 768px) { 
               margin-top: -100px; 
@@ -412,8 +418,8 @@
              
                
           }">
-  <h2>Samruddhi CO-Operative  <span>Bank Ltd.</span></h2>
-</div>
+        <h2>Samruddhi CO-Operative <span>Bank Ltd.</span></h2>
+    </div>
 
 
     <section class="serviceSection01">
@@ -425,9 +431,9 @@
                         <img src="assets\images\newbank.jpeg" alt="bank-img" class="newbankimg">
 
                     </div>
-                    
+
                 </div>
-                
+
                 <div class="col-xl-6">
                     <!-- <div class="icon_box_01">
                         <div class="ibMeta">
@@ -440,11 +446,14 @@
                         <p>Our policies and schemes are aligned with aggressive, yet sustainable growth.</p>
 
                     </div> -->
-                    <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+                    <canvas id="myChart" style="    width: 375px;
+                    max-width: 700px;
+                    display: block;
+                    height: 214px;"></canvas>
 
-                  
+
                 </div>
-               
+
                 <!-- <div class="col-xl-3 col-md-6">
                     <div class="icon_box_01">
                         <div class="ibMeta">
@@ -1695,8 +1704,8 @@
             <div class="row">
                 <div class="col-md-6">
                     <p style="font-weight: bold;">2024 © All rights reserved by <a
-                            href="http://royalswebtechpvtltd.com/" target="_blank" style="color: red;">Royals Webtech
-                         .</a></p>
+                            href="http://royalswebtechpvtltd.com/" target="_blank" style="color: red;">Royals Webtech.
+                            </a></p>
                 </div>
                 <div class="col-md-6">
                     <div class="copyMenu">
@@ -1759,84 +1768,86 @@
     <script src="assets/js/extensions/revolution.extension.video.min.js"></script>
     <script src="assets/js/theme.js"></script>
 
-    <script
-src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
 
 
-</script>
-<script>
+    </script>
+    <script>
+        var xValues = ["2018", "2019", "2020", "2021", "2022"];
+        var loanValues = [3317.2, 4199.41, 4300.5, 4385.1, 9570.36];
+        var depositValues = [6280.64, 7012.25, 8427.95, 9654.01, 4909.77];
+        var cdRatioValues = loanValues.map((loan, index) => (loan / depositValues[index]) * 100);
+        var barColors = ["red", "green", "blue", "orange", "brown"];
 
-    var xValues = ["2018", "2019", "2020", "2021", "2022"];
-    var loanValues = [3317.2, 4199.41, 4300.5, 4385.1, 9570.36];
-    var depositValues = [6280.64, 7012.25, 8427.95,9654.01,4909.77];
-    var cdRatioValues = loanValues.map((loan, index) => (loan / depositValues[index]) * 100);
-    var barColors = ["red", "green", "blue", "orange", "brown"];
-    
-    new Chart("myChart", {
-        type: "bar",
-        data: {
-            labels: xValues,
-            datasets: [
-                {
-                    label: "Loans",
-                    backgroundColor: barColors,
-                    data: loanValues
-                },
-                {
-                    label: "Deposits",
-                    backgroundColor: barColors.map(color => color + "55"), // Lighter shade for deposits
-                    data: depositValues
-                },
-                {
-                    type: "line",
-                    label: "CD Ratio (%)",
-                    borderColor: "black",
-                    backgroundColor: "rgba(0,0,0,0.1)",
-                    data: cdRatioValues,
-                    yAxisID: 'y-axis-2'
-                }
-            ]
-        },
-        options: {
-            legend: {display: true},
-            title: {
-                display: true,
-                text: "Financial Analysis"
-            },
-            scales: {
-                yAxes: [
+        new Chart("myChart", {
+            type: "bar",
+            data: {
+                labels: xValues,
+                datasets: [
                     {
-                        id: 'y-axis-1',
-                        type: 'linear',
-                        position: 'left',
-                        ticks: {
-                            beginAtZero: true
-                        },
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'Amount'
-                        }
+                        label: "Loans",
+                        backgroundColor: barColors,
+                        data: loanValues,
+                        yAxisID: 'y-axis-1'
                     },
                     {
-                        id: 'y-axis-2',
-                        type: 'linear',
-                        position: 'right',
-                        ticks: {
-                            beginAtZero: true,
-                            max: 100
-                        },
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'CD Ratio (%)'
-                        },
-                        gridLines: {
-                            display: false
-                        }
+                        label: "Deposits",
+                        backgroundColor: barColors.map(color => color + "55"), // Lighter shade for deposits
+                        data: depositValues,
+                        yAxisID: 'y-axis-1'
+                    },
+                    {
+                        type: "line",
+                        label: "CD Ratio (%)",
+                        borderColor: "black",
+                        backgroundColor: "rgba(0,0,0,0.1)",
+                        data: cdRatioValues,
+                        yAxisID: 'y-axis-2'
                     }
                 ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                legend: { display: true },
+                title: {
+                    display: true,
+                    text: "Financial Analysis"
+                },
+                scales: {
+                    yAxes: [
+                        {
+                            id: 'y-axis-1',
+                            type: 'linear',
+                            position: 'left',
+                            ticks: {
+                                beginAtZero: true
+                            },
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Amount'
+                            }
+                        },
+                        {
+                            id: 'y-axis-2',
+                            type: 'linear',
+                            position: 'right',
+                            ticks: {
+                                beginAtZero: true,
+                                max: 100
+                            },
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'CD Ratio (%)'
+                            },
+                            gridLines: {
+                                display: false
+                            }
+                        }
+                    ]
+                }
             }
-        }
-    });
+        });
     </script>
 </body>
 

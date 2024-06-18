@@ -892,6 +892,7 @@
 	position: relative;
 	padding: 47px 0 48px;
 	background: #ffedee;
+	margin-top: 110px;
 }
 
 .contactSection {
@@ -1232,9 +1233,8 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
-	margin-bottom: -44px;
-
+	height: 92vh;
+	margin-bottom: -7px;
 
 }
 

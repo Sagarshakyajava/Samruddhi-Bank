@@ -42,12 +42,20 @@
 	}
 
 	.slider {
-		width: 100%;
-		height: 100vh;
-		position: relative;
-		overflow: hidden;
-		margin-bottom: -12%;
-	}
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: -14%;
+}
+
+/* Styles for mobile screens */
+@media only screen and (max-width: 767px) {
+    .slider {
+        height: 50vh; /* Adjust the height for mobile view */
+        margin-bottom:-121px; /* Remove the negative margin for mobile view */
+    }
+}
 
 	.slick-slide {
 		width: 100%;
@@ -502,7 +510,7 @@
 				<div class="col-md-6">
 					<p style="font-weight: bold;">2024 © All rights reserved by <a
 							href="http://royalswebtechpvtltd.com/" target="_blank" style="color: red;">Royals
-							Webtech .
+							Webtech.
 						</a></p>
 				</div>
 				<div class="col-md-6">

@@ -917,7 +917,7 @@
 		margin-right: 0;
 	}
 	.topbar02 .justify-content-end{
-		justify-content: center !important;
+		justify-content:end !important;
 	}
 	.topbar02 p, .topbar02 .lang{
 		display: none;

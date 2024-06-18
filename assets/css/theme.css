@@ -5557,60 +5557,94 @@
   }
 
 /* directors */
-  .card-directors{
-    width: 345px;
-    height: 250px;
-    background: #142e6d;
-    border-radius: 5px;
-    text-align: center;
-    /* color: #f0f0f0; */
-    overflow: hidden;
-    font-family: inherit;
-    z-index: 1;
-    margin-left: 8%;
+.card-directors {
+  width: 345px;
+  height: 250px;
+  background: #142e6d;
+  border-radius: 5px;
+  text-align: center;
+  overflow: hidden;
+  font-family: inherit;
+  z-index: 1;
+  margin: 20px auto; /* Centering the card */
+}
+
+.card-directors .img {
+  display: flex;
+  margin: 60px auto 10px auto;
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  font-size: 11px;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+  z-index: 99;
+}
+
+.card-directors p {
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.card-directors .heading {
+  color: white;
+  padding: 10px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.card-directors svg {
+  padding: 0 5px;
+  cursor: pointer;
+}
+
+.card-directors:hover .img {
+  transform: scale(1.1);
+}
+
+.card-directors:hover h1,
+.card-directors:hover p {
+  opacity: 1;
+}
+
+/* Responsive styles for tablets and small screens */
+@media (max-width: 768px) {
+  .card-directors {
+    width: 90%;
+    height: auto;
+    margin: 20px auto;
   }
-  
+
   .card-directors .img {
-    display: flex;
-    margin: 60px auto 10px auto;
-    width: 85px;
-    height: 85px;
-    /* border: 1px solid #f0f0f0; */
-    border-radius: 50%;
-    font-size: 11px;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.5s;
-    z-index: 99;
-    /* background-color: #152f50; */
+    margin: 40px auto 10px auto;
+    width: 70px;
+    height: 70px;
   }
-  
-  .card-directors p {
-    opacity: 0;
-    transition: all 0.5s;
-  }
-  
+
   .card-directors .heading {
-    color: white;
-    padding: 10px;
-    font-weight: 500;
-    font-size: 18px;
+    font-size: 16px;
   }
-  
-  .card-directors  svg {
-    padding: 0 5px;
-    cursor: pointer;
+}
+
+/* Responsive styles for mobile phones */
+@media (max-width: 480px) {
+  .card-directors {
+    width: 95%;
+    margin: 20px auto;
+    border-radius: 0; /* Optional: Remove border radius for a cleaner look on mobile */
   }
-  
-  .card-directors:hover .img {
-    transform: scale(1.1);
-    /* border: 1px solid #f0f0f0; */
+
+  .card-directors .img {
+    margin: 30px auto 10px auto;
+    width: 60px;
+    height: 60px;
   }
-  
-  .card-directors:hover h1,
-  .card:hover p {
-    opacity: 1;
+
+  .card-directors .heading {
+    font-size: 14px;
   }
+}
 
   /*  */
 
