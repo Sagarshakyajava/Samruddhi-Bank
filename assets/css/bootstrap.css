@@ -558,8 +558,8 @@ pre code {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
+  /* margin-right: -15px;
+  margin-left: -15px; */
 }
 .no-gutters {
   margin-right: 0;
@@ -6078,7 +6078,7 @@ a.close.disabled {
 }
 .carousel-indicators li {
   box-sizing: content-box;
-      margin-bottom: 76px;
+      margin-bottom: 50px;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
   width: 30px;
